@@ -10,7 +10,7 @@ require('dotenv').config();
 const app = express();
 
 // Security & parsing
-app.use(helmet());
+app.use(helmet({ crossOriginResourcePolicy: false }));
 app.use(cors({ origin: 'http://localhost:5173', credentials: true }));
 app.use(morgan('dev'));
 app.use(express.json());
