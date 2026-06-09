@@ -1,7 +1,8 @@
-const router          = require('express').Router();
-const authRoutes      = require('./auth');
-const eventRoutes     = require('./events');
-const bookingRoutes   = require('./bookings');
+const router            = require('express').Router();
+const authRoutes        = require('./auth');
+const eventRoutes       = require('./events');
+const bookingRoutes     = require('./bookings');
+const waitlistRoutes    = require('./waitlist');
 
 router.get('/health', (req, res) => {
   res.json({ success: true, message: 'API is running' });
@@ -10,5 +11,6 @@ router.get('/health', (req, res) => {
 router.use('/auth',     authRoutes);
 router.use('/events',   eventRoutes);
 router.use('/bookings', bookingRoutes);
+router.use('/waitlist', waitlistRoutes);
 
 module.exports = router;
