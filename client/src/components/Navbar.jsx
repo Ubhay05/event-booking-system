@@ -18,6 +18,7 @@ const Navbar = () => {
         {user ? (
           <>
             <Link to="/my-bookings">My Bookings</Link>
+            {user.role === 'admin' && <Link to="/admin">Admin</Link>}
             <span className="nav-user">👤 {user.name}</span>
             <button onClick={handleLogout} className="btn-logout">Logout</button>
           </>

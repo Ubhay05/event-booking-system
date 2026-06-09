@@ -172,3 +172,79 @@ body {
   padding: 0.4rem 0.9rem; cursor: pointer; transition: all 0.2s;
 }
 .btn-cancel:hover { background: #e74c3c; color: #fff; }
+/* Admin Dashboard */
+.admin-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+  border-bottom: 1px solid #2a2a2a;
+  padding-bottom: 0;
+}
+.tab-btn {
+  background: none;
+  border: none;
+  color: #aaa;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+.tab-btn:hover { color: #fff; }
+.tab-btn.active { color: #6c63ff; border-bottom-color: #6c63ff; }
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.stat-card {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.stat-value { font-size: 2rem; font-weight: 700; color: #6c63ff; }
+.stat-label { color: #aaa; font-size: 0.9rem; }
+
+.admin-table-wrap {
+  margin-top: 1.5rem;
+  overflow-x: auto;
+}
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+.admin-table th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  background: #1a1a1a;
+  color: #aaa;
+  border-bottom: 1px solid #2a2a2a;
+}
+.admin-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #1a1a1a;
+  color: #e0e0e0;
+}
+.admin-table tr:hover td { background: #1a1a1a; }
+
+.status-badge.published { background: #1a3a2a; color: #4caf88; }
+.status-badge.draft     { background: #2a2a1a; color: #f0c040; }
+.status-badge.cancelled { background: #3a1a1a; color: #e74c3c; }
+.status-badge.admin     { background: #1a1a3a; color: #6c63ff; }
+.status-badge.user      { background: #2a2a2a; color: #aaa; }
+
+.status-select {
+  background: #0f0f0f;
+  border: 1px solid #2a2a2a;
+  color: #e0e0e0;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+}

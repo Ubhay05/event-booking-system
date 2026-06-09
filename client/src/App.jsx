@@ -8,6 +8,7 @@ import EventDetail from './pages/EventDetail';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import MyBookings from './pages/MyBookings';
+import AdminDashboard from './pages/AdminDashboard';
 
 function App() {
   return (
@@ -20,9 +21,8 @@ function App() {
           <Route path="/events/:id" element={<EventDetail />} />
           <Route path="/login"      element={<Login />} />
           <Route path="/register"   element={<Register />} />
-          <Route path="/my-bookings" element={
-            <ProtectedRoute><MyBookings /></ProtectedRoute>
-          } />
+          <Route path="/my-bookings" element={<ProtectedRoute><MyBookings /></ProtectedRoute>} />
+          <Route path="/admin" element={<ProtectedRoute><AdminDashboard /></ProtectedRoute>} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>
